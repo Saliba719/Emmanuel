@@ -39,8 +39,7 @@
   .game input{accent-color:var(--accent2)}
   label.small{font-size:13px;color:var(--muted);display:block;margin-bottom:6px}
   .input{width:100%;background:#071522;border:1px solid rgba(255,255,255,.04);padding:12px 14px;border-radius:10px;color:#eaf6ff;font-family:ui-monospace,monospace}
-  .note{font-size:12px;color:var(--muted);margin-top:8px}
-  .hbar{height:12px;border-radius:999px; background:linear-gradient(90deg,var(--accent1),var(--accent2)); margin:12px 0; box-shadow:0 6px 18px rgba(12,184,106,.06) inset}
+  .note{font-size:12px;color:var(--muted);margin-top:8px;margin-bottom:12px;}
   .btn-start{width:100%;padding:14px;border-radius:12px;border:0;font-weight:800;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#071018;cursor:pointer;transition:transform 0.1s;}
   .btn-start:active{transform:scale(0.98);}
   .btn-deposit{width:100%;margin-top:12px;padding:12px;border-radius:12px;border:0;background:linear-gradient(90deg,#2b9bff,#06b6d4);color:white;cursor:pointer;transition:transform 0.1s;}
@@ -78,8 +77,6 @@
     <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1781234567)" inputmode="numeric" maxlength="10" />
 
     <div class="note">10 chiffres (début 178) • Devise: <strong>FCFA (XAF)</strong></div>
-
-    <div class="hbar" aria-hidden="true"></div>
 
     <button id="startBtn" class="btn-start">Démarrer</button>
 
@@ -160,7 +157,7 @@
       return;
     }
     // emulate unlocking flow
-    const game = document.querySelector('input[name="game"]:checked'].value;
+    const game = document.querySelector('input[name="game"]:checked').value;
     showMessage(`✅ Compte accepté !\n\n🎮 Jeu : ${game}\n🆔 ID : ${v}\n\nPromo code : BBL22\n\n⚠️ Pour continuer et recevoir le signal, vous devez faire un dépôt unique de 1200 FCFA.`);
   });
 
@@ -180,4 +177,5 @@
 </script>
 </body>
 </html>
+
 
