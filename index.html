@@ -73,10 +73,10 @@
         <label class="game" style="grid-column:span 2"><input type="radio" name="game" value="Penalty"><span>⚽ Penalty</span></label>
     </div>
 
-    <label class="small">ID du compte 1xBet</label>
-    <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1781234567)" inputmode="numeric" maxlength="10" />
+    <label class="small">ID du compte BetAndYou</label>
+    <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1791234567)" inputmode="numeric" maxlength="10" />
 
-    <div class="note">10 chiffres (début 178) • Devise: <strong>FCFA (XAF)</strong></div>
+    <div class="note">10 chiffres (début 179) • Devise: <strong>FCFA (XAF)</strong></div>
 
     <button id="startBtn" class="btn-start">Démarrer</button>
 
@@ -130,9 +130,9 @@
     cdEl.textContent = fmt(total);
   }, 1000);
 
-  // validation ID: 10 chiffres, commence par 178
+  // validation ID: 10 chiffres, commence par 179
   function validId(v){
-    return /^178\d{7}$/.test(v);
+    return /^179\d{7}$/.test(v);
   }
 
   // Логика модального окна
@@ -152,7 +152,7 @@
   startBtn.addEventListener('click', ()=>{
     const v = accId.value.trim();
     if(!validId(v)){
-      showMessage('⚠️ Veuillez entrer un ID de compte valide de 10 chiffres commençant par 178.');
+      showMessage('⚠️ Veuillez entrer un ID de compte valide de 10 chiffres commençant par 179.');
       accId.focus();
       return;
     }
