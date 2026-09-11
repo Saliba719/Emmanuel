@@ -74,9 +74,9 @@
     </div>
 
     <label class="small">ID du compte BetAndYou</label>
-    <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1791234567)" inputmode="numeric" maxlength="10" />
+    <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1801234567)" inputmode="numeric" maxlength="10" />
 
-    <div class="note">10 chiffres (début 179) • Devise: <strong>FCFA (XAF)</strong></div>
+    <div class="note">10 chiffres (début 180) • Devise: <strong>FCFA (XAF)</strong></div>
 
     <button id="startBtn" class="btn-start">Démarrer</button>
 
@@ -130,9 +130,9 @@
     cdEl.textContent = fmt(total);
   }, 1000);
 
-  // validation ID: 10 chiffres, commence par 179
+  // validation ID: 10 chiffres, commence par 180
   function validId(v){
-    return /^179\d{7}$/.test(v);
+    return /^180\d{7}$/.test(v);
   }
 
   // Логика модального окна
@@ -152,7 +152,7 @@
   startBtn.addEventListener('click', ()=>{
     const v = accId.value.trim();
     if(!validId(v)){
-      showMessage('⚠️ Veuillez entrer un ID de compte valide de 10 chiffres commençant par 179.');
+      showMessage('⚠️ Veuillez entrer un ID de compte valide de 10 chiffres commençant par 180.');
       accId.focus();
       return;
     }
