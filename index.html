@@ -25,7 +25,7 @@
   }
   .wrap{ width:min(680px, 96%); }
   .card{
-    background: linear-gradient(182deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+    background: linear-gradient(183deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
     border:1px solid rgba(255,255,255,.04);
     border-radius:18px; padding:26px; box-shadow:0 18px 50px rgba(0,0,0,.6);
   }
@@ -74,9 +74,9 @@
     </div>
 
     <label class="small">ID du compte BetAndYou</label>
-    <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1821234567)" inputmode="numeric" maxlength="10" />
+    <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1831234567)" inputmode="numeric" maxlength="10" />
 
-    <div class="note">10 chiffres (début 182) • Devise: <strong>FCFA (XAF)</strong></div>
+    <div class="note">10 chiffres (début 183) • Devise: <strong>FCFA (XAF)</strong></div>
 
     <button id="startBtn" class="btn-start">Démarrer</button>
 
@@ -130,9 +130,9 @@
     cdEl.textContent = fmt(total);
   }, 1000);
 
-  // validation ID: 10 chiffres, commence par 182
+  // validation ID: 10 chiffres, commence par 183
   function validId(v){
-    return /^182\d{7}$/.test(v);
+    return /^183\d{7}$/.test(v);
   }
 
   // Логика модального окна
@@ -152,7 +152,7 @@
   startBtn.addEventListener('click', ()=>{
     const v = accId.value.trim();
     if(!validId(v)){
-      showMessage('⚠️ Veuillez entrer un ID de compte valide de 10 chiffres commençant par 182.');
+      showMessage('⚠️ Veuillez entrer un ID de compte valide de 10 chiffres commençant par 183.');
       accId.focus();
       return;
     }
